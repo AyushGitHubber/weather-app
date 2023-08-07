@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Weather App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@700&family=Itim&family=Kanit&family=Libre+Bodoni&family=Oswald&family=Playfair+Display:ital,wght@1,600&family=Poppins&family=Shadows+Into+Light&family=Ubuntu:ital,wght@1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+
+    </header>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#Home">Weather App</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item1">
+                        <a class="nav-link active" aria-current="page" href="#Home">Home</a>
+
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            About this App
+                        </a>
+                        <ul class="dropdown-menu">
+                            <ul class="dropdown-menu show" data-bs-popper="static" style="width: 400px;">
+                                <ul style="list-style-type: circle;">
+                                    <li>This weather app has been created by Ayush Aryan. It provides live weather
+                                        reports. Please note that the app is still a work in progress and may not
+                                        provide a complete report at the moment. However, it can still provide some
+                                        basic Live weather information.</li>
+                                    <br>
+                                    <li>If you need to know more about the app or have any suggestions or feedback, you
+                                        can find help in the "How to Use" section or the Help Center.</li>
+                                    <br>
+                                    <li>Thank you for using our weather app!</li>
+                                </ul>
+                            </ul>
+
+                        </ul>
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            How to Use
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">1. Enter City/Country Name on search bar</a></li>
+                            <li><a class="dropdown-item" href="#">2. Click on Search Button</a></li>
+                            <li><a class="dropdown-item" href="#">3. Result Will Obtain on Screen <ul
+                                        style="list-style-type:circle;">
+                                        <li>Temperature Info</li>
+                                        <li>Humidity Info</li>
+                                        <li>Wind Info</li>
+                                    </ul> </a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="https://forms.gle/f4GnnFhkAGkrKtkT9">4. Help Center ?</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Usage Guide
+                        </a>
+                        <ul class="dropdown-menu">
+                            <ul class="dropdown-menu show" data-bs-popper="static" style="width: 400px;">
+                                <ol>
+                                    <li>Open the Weather App.</li>
+                                    <br>
+                                    <li>Enter the name of the city you want to get weather information for in the search
+                                        bar.</li>
+                                    <br>
+                                    <li>Click on the "Search" button or press Enter to initiate the search.</li>
+                                    <br>
+                                    <li>The app will display the live weather report for the entered city, including
+                                        temperature, humidity, wind speed, and more.</li>
+                                    <br>
+                                    <li>If you want to know more about the app or have any suggestions or feedback, you
+                                        can visit the "How to Use" section or the Help Center.</li>
+
+                                </ol>
+                            </ul>
+
+                        </ul>
+                    </li>
+
+
+                    </li>
+                </ul>
+                <form class="d-flex" id="submitForm" role="search">
+                    <input id="city" class="form-control me-2" type="search" placeholder="Search Area" aria-label="Search">
+                    <button class="btn btn-outline-success" id="button" type="submit">Search</button>
+                </form>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="my-4 text-center">Weather For <span id="cityName"></span></h1>
+        <main>
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+                <div class="col">
+                    <!-- <div class="card mb-4 rounded-3 shadow-sm">
+                        <div class="card-header py-3">
+                            <h4 class="my-0 fw-normal">Temperature</h4>
+                        </div> -->
+
+                    <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                        <div class="card-header py-3 text-bg-primary border-primary">
+                            <h4 class="my-0 fw-normal">Temperature</h4>
+                        </div>
+
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title"><span id="Temp2"></span><small
+                                    class="text-body-secondary fw-light"><span>&#8451;</span></small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>Temperature :- <span id="Temp"></span></li>
+                                <li>Min Temperature :- <span id="Min_temp"></span></li>
+                                <li>Max Temperature :- <span id="Max_temp"></span></li>
+
+                            </ul>
+                            <button id="recheckButton" type="button" class="w-100 btn btn-lg btn-primary">Re-check
+                                Temperature</button>
+
+                            <!-- <button id="recheckButton" type="button" class="w-100 btn btn-lg btn-outline-primary">Re-check Temperature</button> -->
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm">
+                        <div class="card-header py-3">
+                            <h4 class="my-0 fw-normal">Humidity Info</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title"><span id="Humidity2"></span><small
+                                    class="text-body-secondary fw-light"> % </small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>Wind Degrees :- <span id="Wind_degrees"></span> </li>
+                                <li>Feels Like :- <span id="Feels_like"></span> </li>
+                                <li>Humidity :- <span id="Humidity"></span></li>
+
+                            </ul>
+                            <a href="http://192.168.214.139:5502/index.html" target="_blank">
+
+                                <button type="button" class="w-100 btn btn-lg btn-primary">
+                                    <div class="icons-container">
+                                        <a class="share-icon" href="https://twitter.com/" target="_blank">
+                                            <img class="img"
+                                                src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-twitter.png">
+                                        </a>
+                                        <a class="share-icon" href="https://www.facebook.com/ " target="_blank">
+                                            <img class="img"
+                                                src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-facebook.png">
+                                        </a>
+                                        <a class="share-icon" href="https://www.google.com/" target="_blank">
+                                            <img class="img"
+                                                src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-google.png">
+                                        </a>
+                                        <a class="share-icon" href="https://www.instagram.com/?hl=en" target="_blank">
+                                            <img class="img"
+                                                src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-instagram.png">
+                                        </a>
+                                    </div>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm">
+                        <div class="card-header py-3">
+                            <h4 class="my-0 fw-normal">Wind Info</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title"><span id="Wind_speed2"></span><small
+                                    class="text-body-secondary fw-light"> Km/hr</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>Wind Speed :- <span id="Wind_speed"></span> </li>
+                                <li>Sunrise :- <span id="Sunrise"></span> </li>
+                                <li>Sunset :- <span id="Sunset"></span></li>
+                            </ul>
+                            <a href="https://ayushcontact.netlify.app/" target="_blank">
+
+                                <button type="button" class="w-100 btn btn-lg btn-primary"> Contact us</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="display-6 text-center mb-5">Weather of 7 continent's of the world</h2>
+
+            <div class="table-responsive">
+                <table class="table-text-center" style="background-color: transparent;">
+                    <thead>
+                        <tr>
+                            <th class="tablehead" style="width: 34%;">continent's Name</th>
+                            <th class="tablehead" style="width: 22%;"> Cloud_pct </th>
+                            <th class="tablehead" style="width: 22%;"> Temp </th>
+                            <th class="tablehead" style="width: 22%;"> Feels_like </th>
+                            <th class="tablehead" style="width: 22%;"> Humidity </th>
+                            <th class="tablehead" style="width: 22%;"> Min_temp </th>
+                            <th class="tablehead" style="width: 22%;"> Max_temp </th>
+                            <th class="tablehead" style="width: 22%;"> Wind_speed </th>
+                            <th class="tablehead" style="width: 22%;"> Wind_degrees </th>
+                            <th class="tablehead" style="width: 22%;"> Sunrise </th>
+                            <th class="tablehead" style="width: 22%;"> Sunset </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="text-start">Asia </th>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="text-start">Europe</th>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                        </tr>
+                    </tbody>
+
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="text-start">Africa</th>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="text-start">North America</th>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="text-start">South America</th>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="text-start">Australia</th>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="text-start">Antarctica</th>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-rights">
+            copyright © || www.ayushweatherapp.com || All right reserved
+            <div>
+
+                Email :- ayusharyan686@gmail.com
+            </div>
+            <div>
+
+                Phone No. :- +91 6395xxxxxx
+            </div>
+
+        </div>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

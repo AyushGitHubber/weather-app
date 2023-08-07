@@ -1,0 +1,159 @@
+ body {
+    margin: 0;
+    padding: 0;
+    background: url('image/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Adjust the alpha value (0 to 1) for transparency */
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url('image/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Adjust the alpha value (0 to 1) for transparency */
+    color: rgba(255, 255, 255, 0.5);
+    /* Adjust the alpha value (0 to 1) for text transparency */
+} */
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url('image/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Adjust the alpha value (0 to 1) for the background transparency */
+    color: white;
+    /* Set the default text color to white */
+}
+
+/* Style the specific card header to be transparent */
+.card-header {
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Adjust the alpha value (0 to 1) for the header transparency */
+    padding: 10px;
+}
+
+
+
+
+
+
+
+
+footer .footer-rights {
+    text-align: center;
+    background-color: white;
+    color: #57537d;
+    padding: 12px 0;
+    margin: 1% 0;
+}
+
+
+
+
+
+.card {
+    background-color: transparent;
+}
+
+
+
+.icons-container :hover{
+    transform: scale(1.2);
+  }
+
+
+  .icons-container {
+    max-width: 450px;
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+
+
+tbody, td, tfoot, th, thead, tr {
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0px;
+    padding: 10px 10px;
+}
+
+
+th.tablehead {
+    border-width: 3px;
+    border-color: black;
+    color: white;
+}
+
+th.text-start {
+    border-width: 3px;
+    border-color: black;
+    color: white;
+}
+
+td{
+    border-width: 2px;
+    border-color:#000000;
+    color: white;
+}
+
+
+
+.navbar{
+    background-color:#a9bab866;
+}
+
+
+#button{
+    color: #000000;
+    border-color: black;
+}
+
+.navbar-brand{
+    font-size: 2rem;
+    font-family: 'Oswald', sans-serif;
+}
+
+.nav-item{
+    font-size: 110%;
+    padding: 0px 13.5px;
+    font-family: 'Poppins', sans-serif;
+}
+.nav-item1{
+    font-size: 110%;
+    padding: 0px 13.5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-item1:hover{
+    transform: scale(1.2);
+}
+.my-4 {
+    margin-top: 1.5rem!important;
+    margin-bottom: 1.5rem!important;
+    font-family: 'Merriweather', serif;
+    padding: 23px;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem!important;
+    font-family: 'Merriweather', serif;
+    font-size: 110%;
+}
+
+.mb-5 {
+    margin-bottom: 2.5rem!important;
+    font-family: 'Merriweather', serif;
+    font-size: 3rem;
+    color: white;
+    
+    
+}
+
